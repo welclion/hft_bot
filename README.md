@@ -15,11 +15,11 @@ HFT Orderbook Flow & Metrics Engine
 Система построена по принципу модульного конвейера (Separation of Concerns):
 
 Используйте код с осторожностью.
-crate bot
-mod common       <- Общие контракты данных (Tick, Signal, Side), PartialEq + Copy
-mod ingestion    <- Асинхронный захватчик WebSockets (Binance Futures), Zero-Copy парсер
-mod engine       <- OS-поток математики, RingBuffer, расчет CVD и скорости тиков
-mod execution    <- Эмулятор исполнения ордеров с симуляцией Slippage и задержки сети
+* crate bot
+* mod common       <- Общие контракты данных (Tick, Signal, Side), PartialEq + Copy
+* mod ingestion    <- Асинхронный захватчик WebSockets (Binance Futures), Zero-Copy парсер
+* mod engine       <- OS-поток математики, RingBuffer, расчет CVD и скорости тиков
+* mod execution    <- Эмулятор исполнения ордеров с симуляцией Slippage и задержки сети
 
 Как запустить в продакшене
 
